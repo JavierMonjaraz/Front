@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent, LandingPageComponent
+    AppComponent, LandingPageComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
