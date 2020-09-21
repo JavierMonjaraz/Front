@@ -1,1 +1,11 @@
-<p>landing-page works!</p>
+<div *ngIf="products.length ===0">
+    <p>
+        No hay nada
+    </p>
+</div>
+
+<div *ngFor="let product of products">
+    <p>
+        {{product.id}} / {{product.name}}
+    </p>
+</div>
