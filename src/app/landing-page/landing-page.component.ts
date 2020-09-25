@@ -12,13 +12,33 @@ import { ServiceService } from '../service.service';
 export class LandingPageComponent implements OnInit {
 
   products = [];
+  info = "no hay nada";
+  nameButton: String = "Mostrar";
+  status = false;
 
-  constructor( private serviceService : ServiceService) { }
+  constructor(private serviceService: ServiceService) { }
 
   ngOnInit(): void {
-    this.serviceService.getProduct("products/").subscribe((data:any[])=>{
-      console.log(data)
-      this.products=data;
+
+  }
+
+  sendService() {
+    this.serviceService.getProduct("products/").subscribe((data: any[]) => {
+      console.log(data),
+        this.products = data;
     });
+  }
+
+  clean() {
+    this.products = [];
+  }
+
+  showHide() {
+    this.status = !this.status
+    if (this.status) {
+      this.nameButton = "Ocultar";
+    } else {
+      this.nameButton = "Mostrar"
+    }
   }
 }

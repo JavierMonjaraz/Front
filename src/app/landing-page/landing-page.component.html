@@ -1,11 +1,41 @@
-<div *ngIf="products.length ===0">
-    <p>
-        No hay nada
-    </p>
+<div>
+    <button (click)="showHide()">
+        {{nameButton}}
+    </button>
 </div>
+<div *ngIf="status">
+    <div *ngIf="products.length ===0">
+        <p>
+            {{info | uppercase}}
+        </p>
+    </div>
 
-<div *ngFor="let product of products">
-    <p>
-        {{product.id}} / {{product.name}}
-    </p>
+    <!--     <div *ngFor="let product of products">
+        <p>
+            {{product.id}} / {{product.name}}
+        </p>
+    </div> -->
+    <div class="container" *ngIf="products.length !=0">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button (click)="sendService()">Ver datos</button>
+    <br>
+    <br>
+    <button (click)="clean()">Limpiar</button>
 </div>
