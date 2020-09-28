@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
-    AppComponent, LandingPageComponent, LoginComponent
+    AppComponent, LandingPageComponent, LoginComponent, HeaderComponent
   ],
   imports: [
     BrowserModule,
