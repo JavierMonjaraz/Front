@@ -1,0 +1,51 @@
+.background-image{
+    background-image:url("src/assets/images/fondo.jpg") ;
+     
+    background-size:cover;
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+}
+
+.background-form{
+    background-color: rgba(255, 255, 255 ,0.8);
+    width: 400px;
+    height: 600px;
+    font-size: 15px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.btnRegistrarse{
+    margin-top: 20px;
+    margin-left: 125px;
+}
+
+.form{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.label{
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.btnIniciarSesion{
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.input{
+    border: 1px solid #000;
+    background: transparent;
+}
+
+.logo{
+    height: 150px;
+    margin-left: 110px;
+    margin-top: 10px;
+}

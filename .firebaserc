@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "angular-deploy-11738"
+  },
+  "targets": {
+    "angular-deploy-11738": {
+      "hosting": {
+        "Front": [
+          "angular-deploy-11738"
+        ]
+      }
+    }
   }
 }

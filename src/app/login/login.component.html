@@ -1,2 +1,28 @@
-<app-header></app-header>
-<p>login works!</p>
+<div class="background-image">
+  <div class="container background-form">
+    <img src="../../assets/images/logoMcBook.png" alt="logo" class="logo">
+    <form>
+      <label for="email" class="col-sm-2 col-form-label">Correo</label>
+      <div class="col-sm">
+        <input type="email" class="form-control input" id="email" placeholder="Ingrese su correo electrónico" required>
+      </div>
+
+      <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+      <div class="col-sm">
+        <input type="password" class="form-control input" id="inputPassword" placeholder="Ingrese su contraseña"
+          required>
+      </div>
+
+      <button type="submit" class="btn btn-dark btnIniciarSesion">Iniciar Sesión</button>
+
+    </form>
+    <a class="btn btnGoogle" (click)="googleAuth()"><img src="../assets/images/google.png" alt="" class="logoGoogle">
+      Iniciar Sesión
+      con Google</a>
+
+    <a class="btnRegistrar" routerLink="/register">Registrase</a>
+
+    <!--       <a class="btn btnGoogle" (click)="logOut()"><img src="../assets/images/google.png" alt="" class="logoGoogle"> Cerrar</a> -->
+
+  </div>
+</div>
