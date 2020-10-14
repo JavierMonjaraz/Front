@@ -1,42 +1,30 @@
-<div class="background-image">
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Inicio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<app-header></app-header>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="">Libros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="">Reseñas</a>
-                </li>
-            </ul>
+<div class="main-div">
+  <mat-card>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-            <button class="btn btn-light my-2 my-sm-0" (click)="logOut()">Cerrar Sesión</button>
-        </div>
-    </nav>
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
 
-    <div class="container background-form">
-        <form>
-            <div class="form">
-                <div class="form-group">
-                    <label for="direccion">Direccion</label>
-                    <input type="text" class="form-control" id="direccion" placeholder="Dirección" required>
-                </div>
-                <div class="form-group">
-                    <label for="imagen">Agregar Imagen</label>
-                    <input type="file" class="form-control-file" id="imagen" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Direccion</label>
-                    <input type="email" class="form-control" id="email" placeholder="Correo electrónico" required>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary btnEnviar">Enviar</button>
-        </form>
-    </div>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> NOMBRE </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> PRECIO </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button mat-raised-button color="primary" (click)="showData()">Mostrar Datos</button>
+  </mat-card>
+  <!-- 
+      
+      <button mat-raised-button color="primary" (click)="showData()">Mostrar Datos</button> -->
 </div>

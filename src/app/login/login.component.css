@@ -1,16 +1,21 @@
-.background-image{
-    background-image:url("src/assets/images/fondo.jpg") ;
-     
-    background-size:cover;
+.main-div{
     display: flex;
-
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 
-.background-form{
+.login-form{
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.example-full-width{
+    width: 100%;
+}
+
+/* .background-form{
     background-color: rgba(255, 255, 255 ,0.8);
     width: 320px;
     height: 520px;
@@ -54,4 +59,4 @@
     height: 150px;
     margin-left: 70px;
     margin-top: 10px;
-}
+} */

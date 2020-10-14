@@ -1,28 +1,18 @@
-<div class="background-image">
-  <div class="container background-form">
-    <img src="../../assets/images/logoMcBook.png" alt="logo" class="logo">
-    <form>
-      <label for="email" class="col-sm-2 col-form-label">Correo</label>
-      <div class="col-sm">
-        <input type="email" class="form-control input" id="email" placeholder="Ingrese su correo electrónico" required>
-      </div>
+<div class="main-div">
+  <mat-card>
+    <form class="login-form" [formGroup]="loginFormGroup">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
 
-      <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
-      <div class="col-sm">
-        <input type="password" class="form-control input" id="inputPassword" placeholder="Ingrese su contraseña"
-          required>
-      </div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
 
-      <button type="submit" class="btn btn-dark btnIniciarSesion">Iniciar Sesión</button>
-
+      <button class="example-full-width" [disabled]="loginFormGroup.invalid" mat-raised-button color="primary"
+        (click)="login()">Login</button>
     </form>
-    <a class="btn btnGoogle" (click)="googleAuth()"><img src="../assets/images/google.png" alt="" class="logoGoogle">
-      Iniciar Sesión
-      con Google</a>
-
-    <a class="btnRegistrar" routerLink="/register">Registrase</a>
-
-    <!--       <a class="btn btnGoogle" (click)="logOut()"><img src="../assets/images/google.png" alt="" class="logoGoogle"> Cerrar</a> -->
-
-  </div>
+  </mat-card>
 </div>
