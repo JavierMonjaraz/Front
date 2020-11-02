@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthServiceService {
-  api: String = 'url_servicio/';
+  api: String = 'https://back-web-193231-ids.herokuapp.com/';
   constructor(private http: HttpClient) { }
 
   isAuthenticated(): boolean {
