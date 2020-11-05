@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Agregar Usuario</h1>
+<div mat-dialog-content>
+    <p>Introduzca los datos solicitados</p>
+    <form [formGroup]='User' class="form">
+        <mat-form-field class="field">
+            <mat-label>Nombre(s)</mat-label>
+            <input matInput placeholder="Nombre" formControlName="name">
+        </mat-form-field>
+        <mat-form-field class="field">
+            <mat-label>Apellidos</mat-label>
+            <input matInput placeholder="Apellidos" formControlName="lastname">
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Edad</mat-label>
+            <input matInput placeholder="Edad" formControlName="age" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="field">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email" type="email">
+        </mat-form-field>
+    </form>
+  </div>
+  <div mat-dialog-actions class="buttons">
+    <button mat-raised-button color="warn" [mat-dialog-close]=null>Cerrar</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="User.value" [disabled]="User.invalid">Agregar</button>
+  </div>

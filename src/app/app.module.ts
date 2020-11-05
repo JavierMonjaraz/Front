@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component'
+import { AddUserDialogComponent } from './add-user-dialog/add-user-dialog.component';
 
 import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -28,11 +29,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent
+    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent, AddUserDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import {MatTableModule} from '@angular/material/table';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
