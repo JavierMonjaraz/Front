@@ -47,22 +47,23 @@ export class DashboardComponent implements OnInit {
   }
 
   update(ID: number) {
-    this.userService.getUser(ID).subscribe((respuesta: [])=>{
-      if(respuesta!=null){
-        const dialogRef = this.dialog.open(PutUserDialogComponent,{
+    this.userService.getUser(ID).subscribe((respuesta: []) => {
+      if (respuesta != null) {
+        const dialogRef = this.dialog.open(PutUserDialogComponent, {
           data: respuesta
         })
 
-        dialogRef.afterClosed().subscribe(data=>{
-          this.userService.putUser(ID,data.name,data.lastname,data.age,data.email).subscribe((respuesta:[])=>{
-            if(respuesta!=null){
-              this.getUsers();
-            }
-          })
+        dialogRef.afterClosed().subscribe(data => {
+          if (data != null) {
+            this.userService.putUser(ID, data.name, data.lastname, data.age, data.email).subscribe((respuesta: []) => {
+              if (respuesta != null) {
+                this.getUsers();
+              }
+            })
+          }
         })
       }
     })
-
   }
 
   agregar(): void {
@@ -78,5 +79,4 @@ export class DashboardComponent implements OnInit {
       }
     })
   }
-
 }

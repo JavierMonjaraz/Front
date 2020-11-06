@@ -23,6 +23,6 @@
     </form>
   </div>
   <div mat-dialog-actions class="buttons">
-    <button mat-raised-button color="warn" [mat-dialog-close]=null>Cerrar</button>
+    <button mat-raised-button color="warn" (click)="closeDialog()">Cerrar</button>
     <button mat-raised-button color="primary" [mat-dialog-close]="User.value" [disabled]="User.invalid">Modificar</button>
   </div>
