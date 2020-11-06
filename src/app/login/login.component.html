@@ -1,9 +1,10 @@
 <div class="main-div">
-  <mat-card>
+  <mat-card class="card">
+    <img src="../../assets/images/logoMcBook.png" alt="Logo" class="logo">
     <form class="login-form" [formGroup]="loginFormGroup">
       <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
-        <input matInput placeholder="Email" formControlName="email">
+        <mat-label>Usuario</mat-label>
+        <input matInput placeholder="Usuario" formControlName="username">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
