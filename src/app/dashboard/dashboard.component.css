@@ -17,7 +17,9 @@ table {
 }
 
 .add_button {
-    display: flex;
+    display:block;
     justify-content: flex-end;
     padding: 10px;
+    padding-left: 90%;
+    font-size: 15px;
 }

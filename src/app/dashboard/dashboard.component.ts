@@ -4,7 +4,8 @@ import { AuthServiceService } from '../service/auth/auth-service.service';
 import { Router } from '@angular/router'
 import { UsersService } from '../service/Users/users.service'
 import { AddUserDialogComponent } from '../add-user-dialog/add-user-dialog.component'
-import { MatDialog} from '@angular/material/dialog';
+import { PutUserDialogComponent } from '../put-user-dialog/put-user-dialog.component'
+import { MatDialog } from '@angular/material/dialog';
 import { from } from 'rxjs';
 
 @Component({
@@ -38,24 +39,39 @@ export class DashboardComponent implements OnInit {
   }
 
   delete(ID: number) {
-    this.userService.deleteUser(ID).subscribe((respuesta:[])=>{
-      if(respuesta==null){
+    this.userService.deleteUser(ID).subscribe((respuesta: []) => {
+      if (respuesta == null) {
         this.getUsers();
       }
     })
   }
 
   update(ID: number) {
+    this.userService.getUser(ID).subscribe((respuesta: [])=>{
+      if(respuesta!=null){
+        const dialogRef = this.dialog.open(PutUserDialogComponent,{
+          data: respuesta
+        })
+
+        dialogRef.afterClosed().subscribe(data=>{
+          this.userService.putUser(ID,data.name,data.lastname,data.age,data.email).subscribe((respuesta:[])=>{
+            if(respuesta!=null){
+              this.getUsers();
+            }
+          })
+        })
+      }
+    })
 
   }
 
   agregar(): void {
     const dialogRef = this.dialog.open(AddUserDialogComponent);
 
-    dialogRef.afterClosed().subscribe(data=>{
-      if(data!=null){
-        this.userService.postUser(data.name,data.lastname,data.age,data.email).subscribe((respuesta:[])=>{
-          if(respuesta!=null){
+    dialogRef.afterClosed().subscribe(data => {
+      if (data != null) {
+        this.userService.postUser(data.name, data.lastname, data.age, data.email).subscribe((respuesta: []) => {
+          if (respuesta != null) {
             this.getUsers();
           }
         })

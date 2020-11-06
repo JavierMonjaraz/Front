@@ -65,7 +65,7 @@ export class UsersService {
       })
     }
     
-    return this.http.post(`${this.api}api/v1/profile/profileModel_user/${ID}`,{name,lastname,age,email}, httpOptions);
+    return this.http.put(`${this.api}api/v1/profile/profileModel_user/${ID}`,{name,lastname,age,email}, httpOptions);
   }
   
 

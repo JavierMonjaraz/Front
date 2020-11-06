@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component'
 import { AddUserDialogComponent } from './add-user-dialog/add-user-dialog.component';
+import { PutUserDialogComponent } from './put-user-dialog/put-user-dialog.component';
 
 import { from } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -35,7 +36,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent, AddUserDialogComponent
+    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent, AddUserDialogComponent, PutUserDialogComponent
   ],
   imports: [
     BrowserModule,
