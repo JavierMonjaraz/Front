@@ -1,26 +1,30 @@
-<div class="background-image">
-    <div class="container background-form">
+<div class="main-div">
+    <mat-card class="card">
         <img src="../../assets/images/logoMcBook.png" alt="logo" class="logo">
-        <form>
-            <div class="form">
-                <label for="username" class="label">Usuario</label>
-                <input type="text" class="form-control input" id="username" placeholder="Ingrese un nombre de usuario"
-                    required>
+        <p class="title">Registro</p>
+        <form class="register-form" [formGroup]="registerFormGroup">
+            <mat-form-field class="example-full-width">
+                <mat-label>Usuario</mat-label>
+                <input matInput placeholder="Usuario" formControlName="username">
+            </mat-form-field>
 
-                <label for="fullname" class="label">Nombre completo</label>
-                <input type="text" class="form-control input" id="fullname" placeholder="Ingrese su nombre completo"
-                    required>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Email" formControlName="email">
+            </mat-form-field>
 
-                <label for="email" class="label">Correo Electrónico</label>
-                <input type="email" class="form-control input" id="email" placeholder="Ingrese su correo electrónico"
-                    required>
+            <mat-form-field class="example-full-width">
+                <mat-label>Contraseña</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Contraseña" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
 
-                <label for="password" class="label">Contraseña</label>
-                <input type="password" class="form-control input" id="password" placeholder="Ingrese una contraseña"
-                    required>
-            </div>
-            <button type="submit" class="btn btn-primary btnRegistrarse">Registrarse</button>
+            <button class="example-full-width" [disabled]="registerFormGroup.invalid" mat-raised-button
+                color="primary" (click)="signup()">Registrar</button>
         </form>
-        <p class="btnIniciarSesion">¿Ya estás registrado? <a routerLink="/login">iniciar sesion</a></p>
-    </div>
+        <p class="btnLogin">¿Ya estás registrado? <a routerLink="/login">iniciar sesion</a></p>
+    </mat-card>
 </div>

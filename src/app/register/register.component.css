@@ -1,51 +1,33 @@
-.background-image{
-    background-image:url("src/assets/images/fondo.jpg") ;
-     
-    background-size:cover;
+.main-div{
     display: flex;
-
-    height: 100%;
-    width: 100%;
-    position: absolute;
+    height: 100vh;
     align-items: center;
+    justify-content: center;
 }
 
-.background-form{
-    background-color: rgba(255, 255, 255 ,0.8);
-    width: 400px;
-    height: 600px;
-    font-size: 15px;
-    font-family: sans-serif;
-    border-radius: 10px;
+.register-form{
+    min-width: 150px;
+    max-width: 300px;
+    width: 100%;
 }
 
-.btnRegistrarse{
-    margin-top: 20px;
-    margin-left: 125px;
-}
-
-.form{
-    margin-top: 10px;
-    padding: 10px;
-}
-
-.label{
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.btnIniciarSesion{
-    margin-top: 10px;
-    margin-left: 60px;
-}
-
-.input{
-    border: 1px solid #000;
-    background: transparent;
+.example-full-width{
+    width: 100%;
 }
 
 .logo{
-    height: 150px;
-    margin-left: 110px;
+    padding-bottom: 25px;
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.btnLogin{
     margin-top: 10px;
+    text-align: center;
+}
+
+.title{
+    text-align: center;
+    font-size: 20px;
 }

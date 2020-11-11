@@ -21,3 +21,8 @@
     display: block;
     margin: auto;
 }
+
+.btnRegistro{
+    margin-top: 10px;
+    text-align: center;
+}
