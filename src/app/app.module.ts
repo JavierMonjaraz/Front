@@ -31,12 +31,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
+import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent, AddUserDialogComponent, PutUserDialogComponent
+    AppComponent, LoginComponent, DashboardComponent, RegisterComponent, HeaderComponent, AddUserDialogComponent, PutUserDialogComponent, RegisterDialogComponent
   ],
   imports: [
     BrowserModule,

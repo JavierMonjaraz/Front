@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    display: block;
+}
+
+.btns{
+    display: flex;
+}
+
+.btnClose{
+    margin-left: auto;
+}

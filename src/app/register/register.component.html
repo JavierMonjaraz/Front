@@ -14,7 +14,7 @@
             </mat-form-field>
 
             <mat-form-field class="example-full-width">
-                <mat-label>Contraseña</mat-label>
+                <mat-label>Contraseña*</mat-label>
                 <input matInput [type]="hidePassword1 ? 'password' : 'text'" placeholder="Contraseña" formControlName="password1">
                 <button mat-icon-button matSuffix (click)="hidePassword1 = !hidePassword1" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hidePassword1">
@@ -33,6 +33,7 @@
             <mat-error *ngIf="checkPassword()" class="matError">
                 Las contraseñas no coinciden
             </mat-error>
+            <p>* mínimo 8 caracteres</p>
             <button class="example-full-width" [disabled]="registerFormGroup.invalid" mat-raised-button
                 color="primary" (click)="signup()">Registrar</button>
         </form>

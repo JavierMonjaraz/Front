@@ -12,9 +12,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'header', component:HeaderComponent}
-
-  /*   {path: 'landing-page', component: LandingPageComponent} */
 ];
 
 @NgModule({
