@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RegisterService {
 
-  api: String = 'https://back-web-193231-ids.herokuapp.com/';
+  api: String = 'http://web-javier.ddns.net/';
   constructor(private http: HttpClient) { }
 
   signup(username: String, email: String, password1: String, password2: String): Observable<any> {

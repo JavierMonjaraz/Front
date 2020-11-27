@@ -8,7 +8,7 @@ import { AuthServiceService } from '../auth/auth-service.service';
   providedIn: 'root'
 })
 export class UsersService {
-  api: String = 'https://back-web-193231-ids.herokuapp.com/';
+  api: String = 'http://web-javier.ddns.net/';
   user = JSON.parse(localStorage.getItem('user'));
   constructor(private http: HttpClient, private authServiceService:AuthServiceService) { }
 
